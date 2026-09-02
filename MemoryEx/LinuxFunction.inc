@@ -377,6 +377,9 @@ stock Address GetProcAddressLinux(Address pBase, const char[] sName, bool bDynam
 }
 stock Address GetImportAddressLinux(Address pBase, const char[] sName )
 {
+    // make unused, not breaking ABI
+    if (pBase) { pBase = Address_Null; }
+
     StringMap hList = LinuxParseMapsFile();
     StringMapSnapshot hSnap = hList.Snapshot();
 
