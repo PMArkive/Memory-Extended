@@ -239,7 +239,7 @@ stock int FindModule(const char[] sModule, char[] sResult, int iMaxLength)
 	return res;
 }
 
-static stock const int g_hEmptyWinApiArgs[MEMORY_EX_WINAPI_MAX_ARGS] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+stock const int g_hEmptyWinApiArgs[MEMORY_EX_WINAPI_MAX_ARGS] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 // return -2 if flags WINAPI_FLAG_NEED_RETURN is not found
 stock any WINAPI_CALL(const char[] libName, const char[] funcName, int flags = WINAPI_FLAG_NONE, int parms = 0, any arg1 = 0, any arg2 = 0, any arg3 = 0, any arg4 = 0, any arg5 = 0, any arg6 = 0, any arg7 = 0, any arg8 = 0, any arg9 = 0, any arg10 = 0)
